@@ -13,7 +13,7 @@ node {
 }
 
 void gradle(String command) {
-    sh """./gradle \
+    sh """./.fork/gradlew \
         --no-daemon \
         --build-file build.gradle.kts \
         --settings-file settings.gradle.kts \
