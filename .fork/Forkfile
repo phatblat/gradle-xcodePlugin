@@ -5,9 +5,12 @@
  */
 
 node {
-    stage("Update Fork") {
+    stage("🛒 Checkout") {
+        checkout scm
         sh "pwd"
         sh "ls -l"
+    }
+    stage("⏫ Update") {
         gradle "projects"
     }
 }
