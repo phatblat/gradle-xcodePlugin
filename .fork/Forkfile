@@ -1,0 +1,23 @@
+#!/usr/bin/env groovy
+/*
+ * Forkfile
+ * gradle-xcodePlugin
+ */
+
+node {
+    stage("Update Fork") {
+        sh "pwd"
+        sh "ls -l"
+        gradle "projects"
+    }
+}
+
+void gradle(String command) {
+    sh """./gradle \
+        --no-daemon \
+        --build-file build.gradle.kts \
+        --settings-file settings.gradle.kts \
+        --warning-mode all \
+        $command
+    """
+}
