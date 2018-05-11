@@ -8,7 +8,7 @@ node {
     stage("🛒 Checkout") {
         checkout scm
         sh "pwd"
-        sh "ls -l"
+        sh "ls -la"
     }
     stage("⏫ Update") {
         gradle "projects"
@@ -16,9 +16,9 @@ node {
 }
 
 void gradle(String command) {
-    sh """./.fork/gradlew \
+    sh """.fork/gradlew \
         --no-daemon \
-        --build-file build.gradle.kts \
+        --build-file .fork/build.gradle.kts \
         --settings-file settings.gradle.kts \
         --warning-mode all \
         $command
