@@ -11,7 +11,7 @@ node {
         sh "mkdir -p .fork/build/dependencies"
 		sh "cd .fork/build/dependencies && git clone git@github.com:phatblat/Fork.git"
 		// Checkout branch
-		sh "cd .fork/build/dependencies/Fork && git checkout -t origin/plugin"
+		// sh "cd .fork/build/dependencies/Fork && git checkout -t origin/plugin"
     }
     stage("⏫ Update") {
         gradle "projects"
