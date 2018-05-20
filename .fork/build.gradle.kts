@@ -16,17 +16,24 @@ import at.phatbl.shellexec.ShellExec
 
 plugins {
      id("at.phatbl.clamp") version "1.1.0"
+     id("at.phatbl.fork") version "1.0.0"
      id("at.phatbl.shellexec") version "1.1.3"
 }
+
+/* -------------------------------------------------------------------------- */
+// 🍴 Fork Configuration
+/* -------------------------------------------------------------------------- */
+
+// fork {
+//     upstream = "openbakery/gradle-xcodePlugin"
+// }
 
 /* -------------------------------------------------------------------------- */
 // 👪 Dependencies
 /* -------------------------------------------------------------------------- */
 
 repositories.jcenter()
-dependencies {
-//    implementation("org.ajoberstar:grgit:+")
-}
+dependencies { }
 
 /* -------------------------------------------------------------------------- */
 // ☑️ Tasks

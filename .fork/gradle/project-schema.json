@@ -10,7 +10,8 @@
         "extensions": {
             "ext": "org.gradle.api.plugins.ExtraPropertiesExtension",
             "buildScan": "com.gradle.scan.plugin.internal.api.g",
-            "defaultArtifacts": "org.gradle.api.internal.plugins.DefaultArtifactPublicationSet"
+            "defaultArtifacts": "org.gradle.api.internal.plugins.DefaultArtifactPublicationSet",
+            "fork": "at.phatbl.fork.ForkExtension"
         }
     }
 }
