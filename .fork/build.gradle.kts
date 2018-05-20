@@ -24,9 +24,9 @@ plugins {
 // 🍴 Fork Configuration
 /* -------------------------------------------------------------------------- */
 
-// fork {
-//     upstream = "openbakery/gradle-xcodePlugin"
-// }
+fork {
+    upstream = "openbakery/gradle-xcodePlugin"
+}
 
 /* -------------------------------------------------------------------------- */
 // 👪 Dependencies
