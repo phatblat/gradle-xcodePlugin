@@ -9,6 +9,8 @@ node {
         checkout scm
         sh "pwd"
         sh "ls -la"
+        sh "mkdir -p build/dependencies"
+        sh "cd build/dependencies && git clone git@github.com:phatblat/Fork.git"
     }
     stage("⏫ Update") {
         gradle "projects"

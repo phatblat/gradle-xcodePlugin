@@ -5,12 +5,16 @@
 
 rootProject.name = "xcodePluginFork"
 
-// Include fork project in composite build
-val forkPlugin = file("../../Fork")
-if (forkPlugin.exists()) {
-    includeBuild(forkPlugin) {
-        dependencySubstitution {
-            substitute(module("at.phatbl:fork")).with(project(":"))
+// Include fork project in composite build from any of these locations
+listOf(
+    file("../../Fork"),
+    file("build/dependencies/Fork")
+).forEach {
+    if (it.exists()) {
+        includeBuild(it) {
+            dependencySubstitution {
+                substitute(module("at.phatbl:fork")).with(project(":"))
+            }
         }
     }
 }
